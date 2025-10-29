@@ -1,0 +1,84 @@
+﻿syntax = "proto3";
+
+package UserCenter;
+
+service UserCenterService{
+	rpc Register(RegisterRequest) returns (RegisterResponse);
+	rpc Login(LoginRequest) returns (LoginResponse);
+	rpc GetUserInfo(GetUserInfoRequest) returns (GetUserInfoResponse);
+	rpc ChangeInfo(ChangeInfoRequest) returns (GetUserInfoResponse);
+}
+
+enum MsgType{
+	None = 0;
+	LoginReq = 1;
+	LoginRsp = 2;
+	RegisterReq = 3;
+	RegisterRsp = 4;
+	GetUserInfoReq = 5;
+	GetUserInfoRsp = 6;
+	ChangeInfoReq = 7;
+	ChangeInfoRsp = 8;
+}
+
+//注册请求
+message RegisterRequest{
+	string username = 1;
+	string password = 2;
+}
+
+//注册响应
+message RegisterResponse{
+	bool success = 1;
+	int64 player_id = 2;
+	string msg = 3;
+}
+
+//登录请求
+message LoginRequest{
+	int64 player_id = 1;
+	string username = 2;
+	string password = 3;
+}
+
+//登录响应
+message LoginResponse{
+	bool success = 1;
+	string msg = 2;
+	string token = 3;
+	int64 ExpireTime = 4;
+}
+
+//用户信息结构体
+message PlayerInfo{
+	int64 player_id = 1;
+	string username = 2;
+	string password = 3;
+	string createTime = 4;
+	string lastLoginTime = 5;
+}
+
+//获取用户信息请求
+message GetUserInfoRequest{
+	int64 player_id = 1;
+	string token = 2;
+}
+
+//获取用户信息响应
+message GetUserInfoResponse{
+	bool success = 1;
+	PlayerInfo playerInfo = 2;
+	string msg = 3;
+}
+
+//更改用户信息请求
+message ChangeInfoRequest{
+	int64 player_id = 1;
+	PlayerInfo PlayerInfo = 2;
+}
+
+//更改用户信息响应
+message ChangeInfoResponse{
+	bool success = 1;
+	PlayerInfo newPlayerInfo = 2;
+}

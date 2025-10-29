@@ -1,11 +1,10 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 using Google.Protobuf;
-using GameNet;
-using MySqlConnector;
-using BCrypt;
+using ServerSide.Microservices.UserCenter;
+using UserCenter;
 
-namespace ServerSide
+namespace ServerSide.Main
 {
     /// <summary>
     /// 服务器端
@@ -46,26 +45,29 @@ namespace ServerSide
         /// <param name="session">发送消息的客户端</param>
         /// <param name="msgType">消息类型</param>
         /// <param name="data">消息体</param>
-        private static void HandleMsg(ClientSession session,MsgType msgType, byte[] data)
+        private static async void HandleMsg(ClientSession session,MsgType msgType, byte[] data)
         {
             switch (msgType)
             {
+                //登录消息
                 case MsgType.LoginReq:
                     //反序列化消息为LoginRequest对象
                     var loginReq = LoginRequest.Parser.ParseFrom(data);
                     //创建登录响应对象
-                    var loginRes = new LoginResponse
-                    {
-                        Success = CheckLoginInfo(loginReq)
-                    };
-                    loginRes.Msg = loginRes.Success ? "登陆成功" : "账号密码错误";
+                    var loginRes = await LoginHandler.CheckLoginInfo(loginReq);
+                    Console.WriteLine(loginRes.Msg);
+                    loginRes.Msg = loginRes.Success ? "Login successful!" : "Incorrect password!";
                     //给客户端发送登录结果消息
-                    session.SendMsg(MsgType.LoginRsp, loginRes);
+                    await session.SendMsgAsync(MsgType.LoginRsp, loginRes);
                     break;
-                //case MsgType.SyncPos:
-                    //var syvcPos = SyncPosition.Parser.ParseFrom(data);
-                    //广播位置消息
-                    //BroadCast(syvcPos, session);
+                //注册消息
+                case MsgType.RegisterReq:
+                    var registerReq = RegisterRequest.Parser.ParseFrom(data);
+                    var registerRes = await RegisterHandler.RegisterUser(registerReq);
+                    Console.WriteLine(registerRes.Msg);
+                    registerRes.Msg = registerRes.Success ? "Register success!" : "There is uesr!";
+                    await session.SendMsgAsync(MsgType.LoginRsp, registerRes);
+                    break;
             }
         }
         /// <summary>
@@ -82,19 +84,10 @@ namespace ServerSide
                     //判断是否为发送客户端
                     if (sso != session)
                     {
-                        //sso.SendMsg(MsgType.SyncPos, msg);
+                        //sso.SendMsgAsync(MsgType.SyncPos, msg);
                     }
                 }
             }
-        }
-
-        private static bool CheckLoginInfo(LoginRequest loginReq)
-        {
-            if (loginReq.Username == "test" && loginReq.Password == "1220")
-                return true;
-            else if (loginReq.Username == "gu" && loginReq.Password == "1026")
-                return true;
-            return false;
         }
     }
 }

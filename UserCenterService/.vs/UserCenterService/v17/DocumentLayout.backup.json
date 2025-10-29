@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26AA1807-2898-49BF-AE34-7FA1C8F9024C}|UserCenterService.csproj|d:\\projectused\\c#\\gamenet\\usercenterservice\\protobufachieve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26AA1807-2898-49BF-AE34-7FA1C8F9024C}|UserCenterService.csproj|solutionrelative:protobufachieve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26AA1807-2898-49BF-AE34-7FA1C8F9024C}|UserCenterService.csproj|d:\\projectused\\c#\\gamenet\\usercenterservice\\tools\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26AA1807-2898-49BF-AE34-7FA1C8F9024C}|UserCenterService.csproj|solutionrelative:tools\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26AA1807-2898-49BF-AE34-7FA1C8F9024C}|UserCenterService.csproj|d:\\projectused\\c#\\gamenet\\usercenterservice\\tools\\mysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26AA1807-2898-49BF-AE34-7FA1C8F9024C}|UserCenterService.csproj|solutionrelative:tools\\mysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26AA1807-2898-49BF-AE34-7FA1C8F9024C}|UserCenterService.csproj|d:\\projectused\\c#\\gamenet\\usercenterservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26AA1807-2898-49BF-AE34-7FA1C8F9024C}|UserCenterService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26AA1807-2898-49BF-AE34-7FA1C8F9024C}|UserCenterService.csproj|d:\\projectused\\c#\\gamenet\\usercenterservice\\protos\\usercenterservice.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{26AA1807-2898-49BF-AE34-7FA1C8F9024C}|UserCenterService.csproj|solutionrelative:protos\\usercenterservice.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MySQL.cs",
+              "DocumentMoniker": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\Tools\\MySQL.cs",
+              "RelativeDocumentMoniker": "Tools\\MySQL.cs",
+              "ToolTip": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\Tools\\MySQL.cs",
+              "RelativeToolTip": "Tools\\MySQL.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAswG4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T08:53:54.776Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProtobufAchieve.cs",
+              "DocumentMoniker": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\ProtobufAchieve.cs",
+              "RelativeDocumentMoniker": "ProtobufAchieve.cs",
+              "ToolTip": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\ProtobufAchieve.cs",
+              "RelativeToolTip": "ProtobufAchieve.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAuwE8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T08:56:12.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Tools.cs",
+              "DocumentMoniker": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\Tools\\Tools.cs",
+              "RelativeDocumentMoniker": "Tools\\Tools.cs",
+              "ToolTip": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\Tools\\Tools.cs",
+              "RelativeToolTip": "Tools\\Tools.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAEMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T04:21:21.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T12:59:26.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserCenterService.Proto",
+              "DocumentMoniker": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\Protos\\UserCenterService.Proto",
+              "RelativeDocumentMoniker": "Protos\\UserCenterService.Proto",
+              "ToolTip": "D:\\ProjectUsed\\C#\\GameNet\\UserCenterService\\Protos\\UserCenterService.Proto",
+              "RelativeToolTip": "Protos\\UserCenterService.Proto",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2025-10-29T08:56:47.062Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+obj\Debug\net8.0\Protobuf/UserCenterService.cs \
+obj\Debug\net8.0\Protobuf/UserCenterServiceGrpc.cs: Protobuf/UserCenterService.Proto

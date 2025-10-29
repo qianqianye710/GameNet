@@ -1,8 +1,8 @@
-﻿using GameNet;
-using Google.Protobuf;
+﻿using Google.Protobuf;
 using System.Net.Sockets;
+using UserCenter;
 
-namespace ServerSide
+namespace ServerSide.Main
 {
     /// <summary>
     /// 单个客户端类
@@ -54,7 +54,7 @@ namespace ServerSide
                         while (offset + 3 <= byteRead)
                         {
                             //解析消息长度
-                            ushort len = (ushort)((recvBuffer[offset] << 8) | recvBuffer[offset + 1]);
+                            ushort len = (ushort)(recvBuffer[offset] << 8 | recvBuffer[offset + 1]);
                             if (offset + 3 + len > byteRead) break;
 
                             //解析消息
@@ -84,7 +84,7 @@ namespace ServerSide
         /// </summary>
         /// <param name="msgType">消息类型</param>
         /// <param name="msg">序列化消息对象</param>
-        public void SendMsg(MsgType msgType,IMessage msg)
+        public async Task SendMsgAsync(MsgType msgType,IMessage msg)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace ServerSide
                 buffer[2] = (byte)msgType;
                 Array.Copy(data, 0, buffer, 3, len);
 
-                netDataStream.Write(buffer, 0, buffer.Length);
+                await netDataStream.WriteAsync(buffer, 0, buffer.Length);
             }
             catch
             {
